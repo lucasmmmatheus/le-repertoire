@@ -7,6 +7,20 @@
       "runtimeArgs": ["run", "dev"],
       "port": 5173,
       "autoPort": true
+    },
+    {
+      "name": "le-repertoire-pages-preview",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "vite",
+        "preview",
+        "--port",
+        "4173",
+        "--strictPort",
+        "--base",
+        "/le-repertoire/"
+      ],
+      "port": 4173
     }
   ]
 }
