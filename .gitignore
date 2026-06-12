@@ -1,0 +1,10 @@
+# dependências e build
+node_modules/
+dist/
+
+# locais / privados
+*.local
+.claude/settings.local.json
+
+# screenshots de bugs antigos (não fazem parte do app)
+Bugs/
