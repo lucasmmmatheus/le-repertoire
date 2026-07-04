@@ -90,9 +90,12 @@ export const liveAi: AiApi = {
       userPrompt,
       tool: recipeTool,
       schema: zRecipe,
-      maxTokens: 6000,
+      // Receitas elaboradas (mise en place completo + 12-15 passos, cada um com
+      // pontos de controle, ajustes e nota científica) passavam de 6000 tokens
+      // e truncavam. Teto bem folgado; o modelo para quando termina — o cap só limita.
+      maxTokens: 12000,
       onProgress,
-      expectedChars: 4500,
+      expectedChars: 5000,
     });
   },
 
