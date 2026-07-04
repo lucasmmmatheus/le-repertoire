@@ -34,9 +34,11 @@ export const liveAi: AiApi = {
       userPrompt,
       tool: checklistTool,
       schema: zChecklist,
-      maxTokens: 1500,
+      // Teto folgado: uma "janta elaborada" gera lista longa e cada ingrediente
+      // no tool_use carrega vários campos. 1500 truncava o JSON no meio.
+      maxTokens: 3000,
       onProgress,
-      expectedChars: 900,
+      expectedChars: 1300,
     });
   },
 
